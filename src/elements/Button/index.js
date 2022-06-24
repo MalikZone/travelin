@@ -7,10 +7,10 @@ export default function Button(props) {
 
     const className = [props.className]
     if(props.isPrimary) className.push("btn-primary")
-    if(props.isLarge) className.push("btn-primary")
-    if(props.isSmall) className.push("btn-primary")
-    if(props.isBlock) className.push("btn-primary")
-    if(props.hasShadow) className.push("btn-primary")
+    if(props.isLarge) className.push("btn-lg")
+    if(props.isSmall) className.push("btn-sm")
+    if(props.isBlock) className.push("btn-block")
+    if(props.hasShadow) className.push("btn-shadow")
 
     const onClick = () => {
         if (props.onClick) props.onClick()
@@ -58,8 +58,8 @@ export default function Button(props) {
         style={props.style}
         onClick={onClick}
         >
-                {props.children}
-            </button> 
+            {props.children}
+        </button> 
     )
 
 }
@@ -70,6 +70,7 @@ Button.propTypes = {
     target: propTypes.string,
     href: propTypes.string,
     className: propTypes.string,
+    isPrimary: propTypes.bool,
     isDisabled: propTypes.bool,
     isLoading: propTypes.bool,
     isSmall: propTypes.bool,

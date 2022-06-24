@@ -4,7 +4,6 @@ import BrandIcon from 'parts/IconText'
 
 export default function Header() {
 
-    console.log('hay', window.location.pathname);
     const getNavLinkClass = path => {
         return window.location.pathname === path ? " active" : "";
     }
